@@ -431,7 +431,19 @@ def bookingsTestThree(numberOfRows, flightSeats, theSeatings):
     matrixPrint(numberOfRows, flightSeats, theSeatings)
     
     
-
+if __name__ == "__main__":
+    
+    #these are the bookings
+    bookings = csvFileReading();
+    
+    #numbers of rows and seats read
+    nrows, seats = readNumberOfRowsAndSeats()
+    
+    #creating the matrix of seatings
+    theSeatings = theLoadingOfSeats(nrows, seats)
+    
+   
+    flightSeatingAssign(nrows, seats, theSeatings, bookings)
     
     
     
