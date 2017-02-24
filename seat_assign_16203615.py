@@ -269,7 +269,7 @@ def fullyBookedSeatsTestOne(numberOfRows, seats, theSeatings):
     print ("first test")
     customerName = " the first test"
 
-    theNumber = 60
+    theNumber = 58
 
     print (customerName, theNumber)
 
@@ -278,7 +278,7 @@ def fullyBookedSeatsTestOne(numberOfRows, seats, theSeatings):
 
         #saving to the metrics
 
-        print ("Sorry, the seats could not be allocated")
+        print ("Sorry! , the seats could not be allocated as the seat bookings are full")
 
     else:
 
@@ -347,89 +347,7 @@ def customerSeatUpdates(row, seat, name):
         if con: 
             con.close()
             
-#function with purpose of testing (test 2)
 
-#no seat is booked
-def absentSeatBookingTestTwo(numberOfRows, flightSeats, theSeatings):
-    
-    print (" the second test")
-    
-    name = "the test 2"
-    theNumber = 59
-
-    print (name, theNumber)
-
-    seatSeparation, outcome = searchEmptySeatPositions(theNumber, numberOfRows, flightSeats, theSeatings)
-
-    if outcome == False:
-
-        #save to  the metrics
-        print ("sorry, passenger seats are failed to allocate ( absent seats)")
-        
-    else:
-
-        theSeatings = outcome
-
-        #save to the database
-        print (" the separated seats are = ", seatSeparation)
-    
-    matrixPrint(numberOfRows, flightSeats, theSeatings)
-    
-
-#function with purpose of testing ( test 3)
-
-#some bookings
-def bookingsTestThree(numberOfRows, flightSeats, theSeatings):
-    
-    print ("The test three")
-    
-    name = "These are tests 3 to 1"
-    theNumber = 56
-
-    print (name, theNumber)
-
-    seatSeparation, outcome = searchEmptySeatPositions(theNumber, numberOfRows, flightSeats, theSeatings)
-    if outcome == False:
-        #save to metrics
-        print ("sorry, the flight passenger seats are not allocated")
-
-    else:
-        theSeatings = outcome
-        #save to database
-        print ("separated seats are = ", seatSeparation)
-    
-    matrixPrint(numberOfRows, flightSeats, theSeatings)
-         
-    theSeatings[5][0] = ''
-
-
-    theSeatings[5][1] = ''
-    
-    theSeatings[7][1] = ''
-
-    theSeatings[7][2] = ''
-
-    theSeatings[7][3] = ''
-    
-    matrixPrint(numberOfRows, flightSeats, theSeatings)
-        
-    name = "tests three to one"
-    theNumber = 7
-
-    print (name, theNumber)
-
-    seatSeparation, outcome = searchEmptySeatPositions(theNumber, numberOfRows, flightSeats, theSeatings)
-    if outcome == False:
-        #save to metrics
-        print ("Could not allocate seats")
-
-    else:
-        theSeatings = outcome
-        #save to database
-        print ("separated seats = ", seatSeparation)
-    
-    matrixPrint(numberOfRows, flightSeats, theSeatings)
-    
     
 if __name__ == "__main__":
     
@@ -441,9 +359,20 @@ if __name__ == "__main__":
     
     #creating the matrix of seatings
     theSeatings = theLoadingOfSeats(nrows, seats)
-    
-   
+
+     #assign the seatings to passengers
     flightSeatingAssign(nrows, seats, theSeatings, bookings)
+    
+   #*********TESTING********#
+    # user interaction : uncomment  the following for testing
+
+    # it will fail to assign any seats when bookings are full once fullyBookedSeatsTestOne(nrows, seats, theSeatings) is uncommented
+
+    #fullyBookedSeatsTestOne(nrows, seats, theSeatings)
+
+  
+
+   
     
     
     
