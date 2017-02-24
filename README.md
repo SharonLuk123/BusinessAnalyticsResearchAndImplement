@@ -4,11 +4,13 @@ Name : Sharon Luk
 Student Number : 16203615
 
 1. Algorithm Implementation
-The algorithm involves a recursive function to find the best positions for the passenger to book.
-Given a table with 10 columns and 8 rows in which T represents the seat is taken, C represents column and R
-represents row.
+The algorithm involves a recursive function to find the best positions for the passenger to book.The recursive
+function finds the positions of north,south, east and west to book seats accordingly as a whole.
+In the cases of not having enough empty seats to book the group of passengers, the recursive function will create
+seperated groups.Given a table with 10 columns and 8 rows in which T represents the seat is taken, C represents
+column and R represents row.
 
-The first scenario : 
+The first scenario: 
 The output would be the following if the flight passenger books 7 seats : 
 
    C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
@@ -64,6 +66,3 @@ R8 Ti Ti Ti Ti Ti Ti Ti Ti T3
 At this point, if a another passenger decides to book more than one seat eg 5 seats. The seat allocation will fail
 as there is only one seat remaining.
 
-The recursive function finds the positions of north,south, east and west to book seats accordingly as a whole.
-In the cases of not having enough empty seats to book the group of passengers, the recursive function will create
-seperated groups.
