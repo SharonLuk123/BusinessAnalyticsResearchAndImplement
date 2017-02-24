@@ -68,12 +68,14 @@ as there is only one seat remaining.
 
 2. Running the program 
 To run the program , simply create a directory or a folder where it contains seat_assign_16203615, data.db ( as
-required in the assignment) and also bookings.csv. Before running the program, the user should make sure 
-flightSeatingAssign(nrows, seats, theSeatings, bookings) remains uncommented in the main.
+required in the assignment) and also bookings.csv. These are defined in the code as databaseFilename = "data.db"
+(file name of SQLite database) and csvFilename = "bookings.csv" (file name for the bookings)
+Before running the program, the user should make sure flightSeatingAssign(nrows, seats, theSeatings, bookings)
+remains uncommented in the main.
 - Open up terminal.
 - The user can simply cd into the directory with python3 installed. 
 - Type in python3 seat_assign_16203615. 
-The program should run smoothly with results outputting in terminal.
+The program should run accordingly with results outputting in terminal.
 
 3. Testing
 The first case was to test if all the passenger seats were booked.
