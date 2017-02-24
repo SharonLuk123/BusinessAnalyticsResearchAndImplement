@@ -75,3 +75,20 @@ flightSeatingAssign(nrows, seats, theSeatings, bookings) remains uncommented in 
 - Type in python3 seat_assign_16203615. 
 The program should run smoothly with results outputting in terminal.
 
+3. Testing
+The first case was to test if all the passenger seats were booked.
+The second case was to test if the passenger seat could not be allocated.
+Make sure to comment flightSeatingAssign(nrows, seats, theSeatings, bookings) during the running of the tests. 
+To run through the testing, simply scroll down to the main in the python file and uncomment the 
+following test cases :
+
+Test case 1 :
+
+#fullyBookedSeatsTestOne(nrows, seats, theSeatings)
+
+Test case 2 :
+
+#absentSeatBookingTestTwo(nrows, seats, theSeatings)
+
+
+
