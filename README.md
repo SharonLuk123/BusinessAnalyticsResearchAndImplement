@@ -66,3 +66,12 @@ R8 Ti Ti Ti Ti Ti Ti Ti Ti T3
 At this point, if a another passenger decides to book more than one seat eg 5 seats. The seat allocation will fail
 as there is only one seat remaining.
 
+2. Running the program 
+To run the program , simply create a directory or a folder where it contains seat_assign_16203615, data.db ( as
+required in the assignment) and also bookings.csv. Before running the program, the user should make sure 
+flightSeatingAssign(nrows, seats, theSeatings, bookings) remains uncommented in the main.
+- Open up terminal.
+- The user can simply cd into the directory with python3 installed. 
+- Type in python3 seat_assign_16203615. 
+The program should run smoothly with results outputting in terminal.
+
