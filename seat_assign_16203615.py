@@ -267,7 +267,7 @@ def flightSeatingAssign(numberOfRows, seats, theSeatings, bookings):
 #all seats are booked
 def fullyBookedSeatsTestOne(numberOfRows, seats, theSeatings):
     print ("first test")
-    customerName = " the first test"
+    customerName = " the first test : "
 
     theNumber = 58
 
@@ -346,6 +346,34 @@ def customerSeatUpdates(row, seat, name):
 # close the connection
         if con: 
             con.close()
+
+#function with purpose of testing (test 2)
+
+#no seat is booked
+def absentSeatBookingTestTwo(numberOfRows, flightSeats, theSeatings):
+    
+    print (" the second test")
+    
+    name = "the test 2 :"
+    theNumber = 59
+
+    print (name, theNumber)
+
+    seatSeparation, outcome = searchEmptySeatPositions(theNumber, numberOfRows, flightSeats, theSeatings)
+
+    if outcome == False:
+
+        #save to  the metrics
+        print ("sorry, passenger seats could not be allocated at this moment ! (absent seats)")
+        
+    else:
+
+        theSeatings = outcome
+
+        #save to the database
+        print (" the separated seats are = ", seatSeparation)
+    
+    matrixPrint(numberOfRows, flightSeats, theSeatings)
             
 
     
@@ -367,8 +395,12 @@ if __name__ == "__main__":
     # user interaction : uncomment  the following for testing
 
     # it will fail to assign any seats when bookings are full once fullyBookedSeatsTestOne(nrows, seats, theSeatings) is uncommented
-
+    # uncomment below for test 1 :
     #fullyBookedSeatsTestOne(nrows, seats, theSeatings)
+
+    # uncomment below for test 2 : 
+    #This is when the test could not allocate the seat
+    #absentSeatBookingTestTwo(nrows, seats, theSeatings)
 
   
 
