@@ -267,7 +267,7 @@ def flightSeatingAssign(numberOfRows, seats, theSeatings, bookings):
 #all seats are booked
 def fullyBookedSeatsTestOne(numberOfRows, seats, theSeatings):
     print ("first test")
-    customerName = " the first test"
+    customerName = " the first test :"
 
     theNumber = 60
 
@@ -354,7 +354,7 @@ def absentSeatBookingTestTwo(numberOfRows, flightSeats, theSeatings):
     
     print (" the second test")
     
-    name = "the test 2"
+    name = "the test 2 :"
     theNumber = 59
 
     print (name, theNumber)
@@ -381,7 +381,7 @@ def absentSeatBookingTestTwo(numberOfRows, flightSeats, theSeatings):
 #some bookings
 def bookingsTestThree(numberOfRows, flightSeats, theSeatings):
     
-    print ("The test three")
+    print ("The test three :")
     
     name = "These are tests 3 to 1"
     theNumber = 56
@@ -421,7 +421,7 @@ def bookingsTestThree(numberOfRows, flightSeats, theSeatings):
     seatSeparation, outcome = searchEmptySeatPositions(theNumber, numberOfRows, flightSeats, theSeatings)
     if outcome == False:
         #save to metrics
-        print ("Could not allocate seats")
+        print ("Unfortunately, Could not allocate seats")
 
     else:
         theSeatings = outcome
