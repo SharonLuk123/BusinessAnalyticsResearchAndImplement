@@ -13,7 +13,7 @@ column and R represents row.
 The first scenario: 
 The output would be the following if the flight passenger books 7 seats : 
 
-   C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
+C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
 R1 T1 T1 T1 T1 T1 T1 T1 
 R2
 R3
@@ -26,7 +26,7 @@ R8
 The second scenario:
 If a second passenger decides to book 5 seats, the output would be the following :
 
-   C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
+C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
 R1 T1 T1 T1 T1 T1 T1 T1 T2 T2 T2
 R2                         T2 T2
 R3
@@ -39,7 +39,7 @@ R8
 The third scenario:
 It can also create seperate passenger group bookings if there are not enough empty seat positions :
 
-   C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
+C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
 R1 T1 T1 T1 T1 T1 T1 T1 T2 T2 T2
 R2 Ti Ti Ti Ti Ti       Ti T2 T2
 R3 Ti Ti Ti Ti Ti       Ti Ti Ti
@@ -53,7 +53,7 @@ The fourth scenario:
 If the third passenger decided to book 7 seats, firstly the 4 seats would be found and then the remaining 3 seats
 available followed by another seat :
 
-   C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
+C1 C2 C3 C4 C5 C6 C7 C8 C9 C10
 R1 T1 T1 T1 T1 T1 T1 T1 T2 T2 T2
 R2 Ti Ti Ti Ti Ti T3 T3 Ti T2 T2
 R3 Ti Ti Ti Ti Ti T3 T3 Ti Ti Ti
@@ -78,6 +78,7 @@ The program should run smoothly with results outputting in terminal.
 3. Testing
 The first case was to test if all the passenger seats were booked.
 The second case was to test if the passenger seat could not be allocated.
+The third case was to test some passenger bookings were there are seperated groups.
 Make sure to comment flightSeatingAssign(nrows, seats, theSeatings, bookings) during the running of the tests. 
 To run through the testing, simply scroll down to the main in the python file and uncomment the 
 following test cases :
@@ -90,5 +91,8 @@ Test case 2 :
 
 #absentSeatBookingTestTwo(nrows, seats, theSeatings)
 
+Test case 3 :
+
+#bookingsTestThree(nrows, seats, theSeatings)
 
 
